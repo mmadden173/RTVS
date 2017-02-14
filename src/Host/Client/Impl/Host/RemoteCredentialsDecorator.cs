@@ -16,7 +16,7 @@ namespace Microsoft.R.Host.Client.Host {
     internal class RemoteCredentialsDecorator : ICredentialsDecorator {
         private readonly ISecurityService _securityService;
         private readonly IMainThread _mainThread;
-        private Credentials _credentials;
+        private volatile Credentials _credentials;
         private readonly string _authority;
         private readonly AsyncReaderWriterLock _lock;
         private bool _credentialsAreValid;
@@ -31,7 +31,10 @@ namespace Microsoft.R.Host.Client.Host {
             _workspaceName = workspaceName;
         }
 
-        public NetworkCredential GetCredential(Uri uri, string authType) => new NetworkCredential(_credentials?.UserName, _credentials?.Password);
+        public NetworkCredential GetCredential(Uri uri, string authType) {
+            var credentials = _credentials;
+            return credentials != null ? new NetworkCredential(credentials.UserName, credentials.Password) : new NetworkCredential();
+        }
 
         public async Task<IDisposable> LockCredentialsAsync(CancellationToken cancellationToken = default(CancellationToken)) {
             // If there is already a LockCredentialsAsync request for which there hasn't been a validation yet, wait until it completes.
@@ -42,7 +45,7 @@ namespace Microsoft.R.Host.Client.Host {
             await _mainThread.SwitchToAsync(cancellationToken);
 
             try {
-                _credentials = await _securityService.GetUserCredentialsAsync(_authority, _workspaceName, cancellationToken);
+                _credentials = _securityService.GetUserCredentials(_authority, _workspaceName, cancellationToken);
             } catch (Exception) {
                 token.Dispose();
                 throw;

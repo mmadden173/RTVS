@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.R.Package", "Package\Impl\Microsoft.VisualStudio.R.Package.csproj", "{26035FE3-25AB-45EC-BB45-7FD0B6C1D545}"
 EndProject
@@ -122,6 +122,8 @@ EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "RemoteServices", "Windows\Setup\RemoteServices\RemoteServices.wixproj", "{9A3D13C0-7685-4C5B-835C-9BFC9E42C0B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WixInstall", "Windows\Setup\WixInstall\WixInstall.csproj", "{02157F86-0C66-4EE3-899B-2B11FF79A66A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigningTest", "SigningTest\SigningTest.csproj", "{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -783,6 +785,18 @@ Global
 		{02157F86-0C66-4EE3-899B-2B11FF79A66A}.Release|x64.Build.0 = Debug|Any CPU
 		{02157F86-0C66-4EE3-899B-2B11FF79A66A}.Release|x86.ActiveCfg = Debug|Any CPU
 		{02157F86-0C66-4EE3-899B-2B11FF79A66A}.Release|x86.Build.0 = Debug|Any CPU
+		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Debug|x64.Build.0 = Debug|Any CPU
+		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Debug|x86.Build.0 = Debug|Any CPU
+		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Release|x64.ActiveCfg = Release|Any CPU
+		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Release|x64.Build.0 = Release|Any CPU
+		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Release|x86.ActiveCfg = Release|Any CPU
+		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

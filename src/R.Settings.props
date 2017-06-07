@@ -9,8 +9,9 @@
     <SourceDirectory Condition="'$(SourceDirectory)' == ''">$(RootDirectory)src\</SourceDirectory>
     <MicroBuildPluginDirectory Condition=" '$(MicroBuildPluginDirectory)' == '' ">$(RootDirectory)\NugetPackages\</MicroBuildPluginDirectory>
     <PrivateAssembliesFolderPath>$(DevEnvDir)\PrivateAssemblies\</PrivateAssembliesFolderPath>
-    <!-- We do not strong name sign in desktop builds -->
-    <MicroBuild_DoNotStrongNameSign>true</MicroBuild_DoNotStrongNameSign>
+    <!-- We do need to import nuget props and targets in core .net -->
+    <SkipImportNuGetProps>false</SkipImportNuGetProps>
+    <SkipImportNuGetBuildTargets>false</SkipImportNuGetBuildTargets>
   </PropertyGroup>
 
   <!--

@@ -1,26 +1,14 @@
 ﻿<Project>
- <PropertyGroup>
-    <RootDirectory Condition="'$(RootDirectory)' == ''">$(MSBuildThisFileDirectory)..\</RootDirectory>
-    <LibDirectory Condition="'$(LibDirectory)' == ''">$(RootDirectory)lib\</LibDirectory>
-    <BinDirectory Condition="'$(BinDirectory)' == ''">$(RootDirectory)bin\</BinDirectory>
-    <ObjDirectory Condition="'$(ObjDirectory)' == ''">$(RootDirectory)obj\</ObjDirectory>
-    <SourceDirectory Condition="'$(SourceDirectory)' == ''">$(RootDirectory)src\</SourceDirectory>
-    <BaseIntermediateOutputPath>$(ObjDirectory)\$(AssemblyName)\</BaseIntermediateOutputPath>
-    <BaseOutputPath>$(BinDirectory)</BaseOutputPath>
-    <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)\</IntermediateOutputPath>
-    <OutputPath>$(BaseOutputPath)\$(Configuration)\</OutputPath>
-    <OutDir>$(OutputPath)</OutDir>
-  </PropertyGroup>
-   <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
   <PropertyGroup>
     <TargetFrameworks>netstandard1.6;net46</TargetFrameworks>
     <AssemblyName>Microsoft.R.Common.Core</AssemblyName>
   </PropertyGroup>
   <Import Project="..\..\..\R.Settings.props" />
- <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.6|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.6|AnyCPU'">
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
-   <ItemGroup>
+  <ItemGroup>
     <Compile Include="$(SourceDirectory)GlobalAssemblyInfo.cs" Link="Properties\GlobalAssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

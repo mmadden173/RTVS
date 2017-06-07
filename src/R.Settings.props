@@ -71,6 +71,7 @@
     <BaseOutputPath>$(BinDirectory)</BaseOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)\</IntermediateOutputPath>
     <OutputPath>$(BaseOutputPath)\$(Configuration)\</OutputPath>
+    <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
   
   <PropertyGroup>

@@ -10,8 +10,9 @@
     <MicroBuildPluginDirectory Condition=" '$(MicroBuildPluginDirectory)' == '' ">$(RootDirectory)\NugetPackages\</MicroBuildPluginDirectory>
     <PrivateAssembliesFolderPath>$(DevEnvDir)\PrivateAssemblies\</PrivateAssembliesFolderPath>
     <!-- We do need to import nuget props and targets in core .net -->
-    <SkipImportNuGetProps>false</SkipImportNuGetProps>
+    <!--<SkipImportNuGetProps>false</SkipImportNuGetProps>
     <SkipImportNuGetBuildTargets>false</SkipImportNuGetBuildTargets>
+    <ExcludeRestorePackageImports>false</ExcludeRestorePackageImports>-->
   </PropertyGroup>
 
   <!--
@@ -79,4 +80,6 @@
     <DefineConstants Condition="'$(VisualStudioVersion)'=='15.0'">VS15;$(DefineConstants)</DefineConstants>
     <DefineConstants Condition="'$(VisualStudioVersion)'=='16.0'">VS16;$(DefineConstants)</DefineConstants>
   </PropertyGroup>
+
+  <Import Project="$(MSBuildProjectDirectory)\$(MSBuildProjectName).nuget.props" Condition="Exists('$(MSBuildProjectDirectory)\$(MSBuildProjectName).nuget.props')" />
 </Project>

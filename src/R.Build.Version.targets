@@ -79,4 +79,5 @@
                              #define VER_PRODUCTVERSION_STR &quot;$(BuildVersion)\0&quot;">
     </WriteLinesToFile>
   </Target>
+  <Import Project="$(MSBuildProjectDirectory)\$(MSBuildProjectName).nuget.targets" Condition="Exists('$(MSBuildProjectDirectory)\$(MSBuildProjectName).nuget.targets')" />
 </Project>

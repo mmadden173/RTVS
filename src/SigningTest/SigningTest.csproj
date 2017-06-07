@@ -4,14 +4,13 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard1.6;net46</TargetFrameworks>
   </PropertyGroup>
+  <Import Project="..\R.Settings.props" />
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\bin\Debug\</OutputPath>
     <DefineConstants>TRACE;DEBUG;NETSTANDARD1_6;</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\bin\Release</OutputPath>
     <DefineConstants>TRACE;NETSTANDARD1_6;</DefineConstants>
   </PropertyGroup>
   <ItemGroup>

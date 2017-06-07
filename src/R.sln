@@ -125,6 +125,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WixInstall", "Windows\Setup
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigningTest", "SigningTest\SigningTest.csproj", "{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigningTestRegular", "SigningTestRegular\SigningTestRegular.csproj", "{72E53D65-5208-43CB-8A26-B3A22142139A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -797,6 +799,18 @@ Global
 		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Release|x64.Build.0 = Release|Any CPU
 		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Release|x86.ActiveCfg = Release|Any CPU
 		{291FEE43-3EC5-47C8-B4CE-95D60F7B8EDB}.Release|x86.Build.0 = Release|Any CPU
+		{72E53D65-5208-43CB-8A26-B3A22142139A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E53D65-5208-43CB-8A26-B3A22142139A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E53D65-5208-43CB-8A26-B3A22142139A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{72E53D65-5208-43CB-8A26-B3A22142139A}.Debug|x64.Build.0 = Debug|Any CPU
+		{72E53D65-5208-43CB-8A26-B3A22142139A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{72E53D65-5208-43CB-8A26-B3A22142139A}.Debug|x86.Build.0 = Debug|Any CPU
+		{72E53D65-5208-43CB-8A26-B3A22142139A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E53D65-5208-43CB-8A26-B3A22142139A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E53D65-5208-43CB-8A26-B3A22142139A}.Release|x64.ActiveCfg = Release|Any CPU
+		{72E53D65-5208-43CB-8A26-B3A22142139A}.Release|x64.Build.0 = Release|Any CPU
+		{72E53D65-5208-43CB-8A26-B3A22142139A}.Release|x86.ActiveCfg = Release|Any CPU
+		{72E53D65-5208-43CB-8A26-B3A22142139A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

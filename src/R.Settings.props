@@ -70,7 +70,7 @@
     <BaseIntermediateOutputPath>$(ObjDirectory)\$(AssemblyName)\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)\$(AssemblyName)\</IntermediateOutputPath>
     <BaseOutputPath>$(BinDirectory)</BaseOutputPath>
-    <OutputPath>$(BaseOutputPath)\$(Configuration)\</OutputPath>
+    <OutputPath Condition="'$(TargetFramework)' == ''">$(BaseOutputPath)\$(Configuration)\</OutputPath>
   </PropertyGroup>
   
   <PropertyGroup>
